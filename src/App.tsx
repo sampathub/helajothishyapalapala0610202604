@@ -5872,7 +5872,7 @@ export default function App() {
 
         {/* Coded credentials footer */}
         <footer className="mt-16 text-center text-[11px] text-slate-500 font-sans tracking-wider border-t border-slate-900 pt-6" id="app_developer_footer">
-          <p>© 2026 ශ්‍රී ලාංකීය කේන්දර සටහන - Sri Lankan Astrological Computations & Digital Kundali Engine.</p>
+          <p>© 2026 ශ්‍රී ලාංකීය කේන්දර සටහන - Sri Lankan Astrological Computations & sampathub89@gmail.com-+94716242455.</p>
           <p className="opacity-75 mt-1">
             {lang === 'sinhala'
               ? "Vedic Sidereal Lahiri Ephemeris සහාය ඇතිව කෘත්‍රිම බුද්ධියෙන් නිපදවන ලදී."
