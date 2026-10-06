@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;700&family=Kalam:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Sinhala", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Noto Sans Sinhala", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-handwritten: "Caveat", "Kalam", "Noto Sans Sinhala", cursive;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0b0f19;
+  color: #f1f5f9;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 1) 0%, #030712 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Custom class for beautiful hand-drawn astrological details */
+.font-handwritten {
+  font-family: var(--font-handwritten);
+}
+
+
+/* Astrological Kendraya Grid Layout Lines */
+.kendraya-grid {
+  position: relative;
+  background-color: #030712;
+  border: 2px solid #8b5cf6;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.kendraya-line {
+  stroke: #6d28d9;
+  stroke-width: 2;
+}
+
+.kendraya-line-sub {
+  stroke: rgba(139, 92, 246, 0.3);
+  stroke-width: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(31, 41, 55, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.8);
+}
+
+/* Glow effects */
+.glow-purple {
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
+}
+.glow-gold {
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.15);
+}
+
+/* A4 Astrological Report Styling */
+.a4-page {
+  width: 100%;
+  max-width: 210mm;
+  min-height: auto;
+  padding: 1.25rem;
+  background-color: #ffffff;
+  color: #0f172a;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+  .a4-page {
+    width: 210mm;
+    height: 296mm;
+    padding: 15mm 20mm;
+    page-break-after: always;
+    break-after: page;
+  }
+}
+
+.report-border {
+  border: 3px double #b45309; /* Elegant gold-brown double border commonly found on traditional horoscopes */
+  border-radius: 4px;
+}
+
+@media print {
+  /* Set light print-friendly backgrounds */
+  html, body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #451a03 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  /* Hide every element on the page by default */
+  body * {
+    visibility: hidden !important;
+  }
+  
+  /* Make ONLY the print-area-wrapper and its descendants visible */
+  #print-area-wrapper, #print-area-wrapper * {
+    visibility: visible !important;
+  }
+  
+  /* Position print container at top-left of printed page */
+  #print-area-wrapper {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    background-color: #ffffff !important;
+  }
+  
+  /* Reset layout constraints on parent dialog/modal structures to let pages break correctly */
+  #root, .fixed, [role="dialog"], div.fixed {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 210mm !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+  
+  /* Perfect premium fit for A4 pages */
+  .a4-page {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 15mm 20mm !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    box-sizing: border-box !important;
+    border: 3px double #b45309 !important; /* Retain gold booklet double border on print! */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  .grid-cols-1.sm\:grid-cols-2,
+  .print-grid-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@keyframes toastTimer {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+.animate-toast-timer {
+  animation: toastTimer 8s linear forwards;
+}
+
+

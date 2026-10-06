@@ -1,0 +1,6 @@
+{
+  "name": "Sri Lankan Astrology Predictions",
+  "description": "Calculate your Sri Lankan birth chart (Kendraya) and get deep astrological predictions (Palapala), planetary placements, and chat with a professional AI Jyotishacharya in Sinhala and English.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

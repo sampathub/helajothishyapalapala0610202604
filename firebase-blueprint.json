@@ -1,0 +1,70 @@
+{
+  "entities": {
+    "Report": {
+      "title": "Report",
+      "description": "An astrological report with birth details, chart calculations, and predictions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "contactType": { "type": "string" },
+        "contactValue": { "type": "string" },
+        "birthDetails": { "type": "object" },
+        "chart": { "type": "object" },
+        "predictions": { "type": "object" },
+        "rating": { "type": "integer" },
+        "comment": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "driveFileId": { "type": "string" },
+        "chatHistory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sender": { "type": "string" },
+              "text": { "type": "string" },
+              "timestamp": { "type": "string" }
+            },
+            "required": ["sender", "text"]
+          }
+        }
+      },
+      "required": ["id", "contactValue"]
+    },
+    "SystemConfig": {
+      "title": "SystemConfig",
+      "description": "System configuration and tokens",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "tokens": { "type": "object" }
+      },
+      "required": ["id"]
+    },
+    "Usage": {
+      "title": "Usage",
+      "description": "Daily calculation usage tracking",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "date": { "type": "string" },
+        "count": { "type": "integer" },
+        "updatedAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/reports/{reportId}": {
+      "schema": "Report",
+      "description": "Astrological reports and lookups"
+    },
+    "/config/{configId}": {
+      "schema": "SystemConfig",
+      "description": "System configuration and Google Drive tokens"
+    },
+    "/usage/{usageId}": {
+      "schema": "Usage",
+      "description": "Daily calculation usage records"
+    }
+  }
+}

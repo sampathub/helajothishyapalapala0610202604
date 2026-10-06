@@ -1,0 +1,25 @@
+[build]
+  publish = "dist"
+  command = "npm run build:client"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["vite"]
+  included_files = ["firebase-applet-config.json", "reports.json", "audit_logs.json", "astro_photos/**"]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cross-Origin-Opener-Policy = "unsafe-none"
+

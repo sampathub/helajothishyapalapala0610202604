@@ -1,0 +1,11 @@
+{
+  "projectId": "my-apps-script-logs",
+  "appId": "1:1051412247539:web:ddfe98a57ebc790cccd886",
+  "apiKey": "AIzaSyAujseEFfc3jieZGFg6mr7EFMEjAHfKQ3k",
+  "authDomain": "my-apps-script-logs.firebaseapp.com",
+  "databaseURL": "https://my-apps-script-logs-default-rtdb.asia-southeast1.firebasedatabase.app",
+  "firestoreDatabaseId": "",
+  "storageBucket": "my-apps-script-logs.firebasestorage.app",
+  "messagingSenderId": "1051412247539",
+  "measurementId": "G-XHSNB0MTJG"
+}

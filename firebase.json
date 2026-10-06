@@ -1,0 +1,7 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "database": "ai-studio-srilankanastrolo-47be069e-6918-489d-9c56-3d882ad39818",
+    "databaseId": "ai-studio-srilankanastrolo-47be069e-6918-489d-9c56-3d882ad39818"
+  }
+}

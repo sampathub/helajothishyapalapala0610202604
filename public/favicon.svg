@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="46" fill="#090d16" stroke="#f59e0b" stroke-width="4"/>
+  <!-- Sun Rays & Astrological Star -->
+  <path d="M50 8 L54 36 L82 22 L64 44 L92 50 L64 56 L82 78 L54 64 L50 92 L46 64 L18 78 L36 56 L8 50 L36 44 L18 22 L46 36 Z" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="50" cy="50" r="18" fill="#d97706" stroke="#fbbf24" stroke-width="2"/>
+  <circle cx="50" cy="50" r="8" fill="#fef3c7"/>
+</svg>
